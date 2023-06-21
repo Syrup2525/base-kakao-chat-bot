@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.BanPackageActivity"
+    tools:ignore="HardcodedText" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/common_toolbar"
+            layout="@layout/common_toolbar" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="봇이 동작할 채팅방 목록을 관리합니다."
+            android:textSize="13sp"
+            android:gravity="center"
+            android:paddingTop="7.5dp"
+            android:paddingBottom="7.5dp"
+            android:background="@color/app_line"/>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp_chatting"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</layout>

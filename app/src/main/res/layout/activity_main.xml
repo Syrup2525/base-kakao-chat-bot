@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.MainActivity"
+    tools:ignore="DisableBaselineAlignment,UseCompoundDrawables">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/common_toolbar"
+            layout="@layout/common_toolbar" />
+
+        <com.sanctuary.kakaotalkchatbot.widght.NotSwipeViewPager
+            android:id="@+id/vp_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/v_division"
+            android:layout_below="@id/common_toolbar"/>
+
+        <View
+            android:id="@+id/v_division"
+            android:layout_width="match_parent"
+            android:layout_height="0.66dp"
+            android:layout_above="@+id/lo_navigation"
+            android:background="@color/app_line"/>
+
+        <LinearLayout
+            android:id="@+id/lo_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/lo_chatting_setting"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_chatting_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="ic_list_alt_black"
+                    android:layout_marginBottom="3dp"
+                    app:tint="@color/colorPrimary"
+                    android:src="@drawable/ic_list_alt_black" />
+
+                <TextView
+                    android:id="@+id/tv_chatting_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="규칙 관리"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="9sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lo_send_history"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_send_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="ic_receipt_long"
+                    android:layout_marginBottom="3dp"
+                    app:tint="@color/un_select"
+                    android:src="@drawable/ic_send" />
+
+                <TextView
+                    android:id="@+id/tv_send_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="전송 내역"
+                    android:textColor="@color/un_select"
+                    android:textSize="9sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lo_command"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_command"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="ic_info"
+                    app:tint="@color/un_select"
+                    android:layout_marginBottom="3dp"
+                    android:src="@drawable/ic_receipt_long" />
+
+                <TextView
+                    android:id="@+id/tv_command"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="명령어"
+                    android:textColor="@color/un_select"
+                    android:textSize="9sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lo_setting"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="ic_setting"
+                    app:tint="@color/un_select"
+                    android:layout_marginBottom="3dp"
+                    android:src="@drawable/ic_setting" />
+
+                <TextView
+                    android:id="@+id/tv_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="설정"
+                    android:textColor="@color/un_select"
+                    android:textSize="9sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lo_support"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_support"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="ic_info"
+                    app:tint="@color/un_select"
+                    android:layout_marginBottom="3dp"
+                    android:src="@drawable/ic_info" />
+
+                <TextView
+                    android:id="@+id/tv_support"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="문제 해결"
+                    android:textColor="@color/un_select"
+                    android:textSize="9sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>
